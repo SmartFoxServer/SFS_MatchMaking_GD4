@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="SFS_MatchMaking_GD4"
+run/main_scene="res://login.tscn"
+config/features=PackedStringArray("4.0", "GL Compatibility")
+boot_splash/show_image=false
+config/icon="res://icon.svg"
+boot_splash/name="SFS_Match_GD4"
+
+[autoload]
+
+globalmanager="*res://globalmanager.tscn"
+gamelist="*res://gamelist.tscn"
+buddylist="*res://buddylist.tscn"
+invitelist="*res://invitelist.tscn"
+
+[display]
+
+window/size/viewport_width=1440
+window/size/viewport_height=810
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_height"
+
+[dotnet]
+
+project/assembly_name="SFS_Connector_GD4"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

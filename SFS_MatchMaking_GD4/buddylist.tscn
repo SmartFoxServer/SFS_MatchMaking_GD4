@@ -1,0 +1,171 @@
+[gd_scene load_steps=19 format=3 uid="uid://ru6is162lspu"]
+
+[ext_resource type="Script" path="res://scripts/BuddyListItem.cs" id="1_jmro4"]
+[ext_resource type="Texture2D" uid="uid://cyis5lwsiuki4" path="res://images/icons/state-offline.png" id="2_6e2qp"]
+[ext_resource type="Texture2D" uid="uid://b0c0n4knk7lws" path="res://images/icons/unblock.png" id="3_p3a4t"]
+[ext_resource type="Texture2D" uid="uid://cuwjfcr2j6lg" path="res://images/icons/state-available.png" id="4_aa06c"]
+[ext_resource type="Texture2D" uid="uid://dh2q4s87exjik" path="res://images/icons/block.png" id="4_xw3x3"]
+[ext_resource type="Texture2D" uid="uid://cyt2no8q2xp5b" path="res://images/icons/remove.png" id="5_1kyer"]
+[ext_resource type="Texture2D" uid="uid://dqgqaacnnrwul" path="res://images/icons/state-away.png" id="5_lebsh"]
+[ext_resource type="Texture2D" uid="uid://dqfycqwuxg4k3" path="res://images/icons/state-occupied.png" id="6_33nug"]
+[ext_resource type="Texture2D" uid="uid://ccj43s8uf23dp" path="res://images/icons/add.png" id="6_wt4yk"]
+[ext_resource type="Texture2D" uid="uid://dg4h3tvvbtj4g" path="res://images/icons/state-blocked.png" id="8_mec3y"]
+[ext_resource type="FontFile" uid="uid://b11qhqw5ioane" path="res://fonts/ARIALBD.TTF" id="9_7vi1n"]
+[ext_resource type="FontFile" uid="uid://q4tvl3dc7vp" path="res://fonts/ARIAL.TTF" id="10_ijahw"]
+[ext_resource type="Texture2D" uid="uid://capcu5nh44162" path="res://images/icons/chat.png" id="11_x7iuw"]
+[ext_resource type="Texture2D" uid="uid://dslt6fyfaijee" path="res://images/icons/chat-away.png" id="12_rmw1k"]
+[ext_resource type="Texture2D" uid="uid://nix4mnow62nn" path="res://images/icons/play.png" id="13_2oi47"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_btwex"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_scdi3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qeahf"]
+
+[node name="BuddyList" type="Control"]
+layout_mode = 3
+anchor_right = 0.322
+anchor_bottom = 0.119
+offset_right = 0.320007
+offset_bottom = -0.389999
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BuddyListItem" type="Control" parent="." node_paths=PackedStringArray("statusIcon", "mainLabel", "moodLabel", "chatButton", "chatButtonText", "blockButton", "removeButton", "addButton", "inviteButton")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.988
+anchor_bottom = 1.0
+offset_right = 21.376
+offset_bottom = -6.0
+script = ExtResource("1_jmro4")
+statusIcon = NodePath("StatusIcon")
+mainLabel = NodePath("BuddyName")
+moodLabel = NodePath("Mood")
+chatButton = NodePath("ChatButton")
+chatButtonText = NodePath("ChatButton/ChatButtonText")
+blockButton = NodePath("BlockButton")
+removeButton = NodePath("RemoveButton")
+addButton = NodePath("AddButton")
+inviteButton = NodePath("InviteButton")
+buttonIconBlock = ExtResource("4_xw3x3")
+buttonIconUnblock = ExtResource("3_p3a4t")
+statusIconAvailable = ExtResource("4_aa06c")
+statusIconAway = ExtResource("5_lebsh")
+statusIconOccupied = ExtResource("6_33nug")
+statusIconOffline = ExtResource("2_6e2qp")
+statusIconBlocked = ExtResource("8_mec3y")
+
+[node name="StatusIcon" type="TextureRect" parent="BuddyListItem"]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("2_6e2qp")
+
+[node name="BuddyName" type="LineEdit" parent="BuddyListItem"]
+layout_mode = 2
+offset_left = 64.0
+offset_right = 272.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_7vi1n")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_btwex")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_scdi3")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_qeahf")
+editable = false
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+
+[node name="Mood" type="LineEdit" parent="BuddyListItem"]
+layout_mode = 2
+offset_left = 64.0
+offset_top = 41.0
+offset_right = 272.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_ijahw")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxEmpty_btwex")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_scdi3")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_qeahf")
+editable = false
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+
+[node name="ChatButton" type="TextureButton" parent="BuddyListItem"]
+layout_mode = 2
+offset_left = 250.0
+offset_top = 24.0
+offset_right = 290.0
+offset_bottom = 64.0
+texture_normal = ExtResource("11_x7iuw")
+texture_disabled = ExtResource("12_rmw1k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ChatButtonText" type="Label" parent="BuddyListItem/ChatButton"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InviteButton" type="TextureButton" parent="BuddyListItem"]
+layout_mode = 2
+offset_left = 292.0
+offset_top = 24.0
+offset_right = 332.0
+offset_bottom = 64.0
+texture_normal = ExtResource("13_2oi47")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BlockButton" type="TextureButton" parent="BuddyListItem"]
+layout_mode = 2
+offset_left = 334.0
+offset_top = 24.0
+offset_right = 374.0
+offset_bottom = 64.0
+texture_normal = ExtResource("4_xw3x3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RemoveButton" type="TextureButton" parent="BuddyListItem"]
+layout_mode = 2
+offset_left = 380.0
+offset_top = 24.0
+offset_right = 420.0
+offset_bottom = 64.0
+texture_normal = ExtResource("5_1kyer")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AddButton" type="TextureButton" parent="BuddyListItem"]
+visible = false
+layout_mode = 2
+offset_left = 380.0
+offset_top = 24.0
+offset_right = 420.0
+offset_bottom = 64.0
+texture_normal = ExtResource("6_wt4yk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Line2D" type="Line2D" parent="BuddyListItem"]
+position = Vector2(-1.63797, 78.75)
+scale = Vector2(0.668716, 8.5)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 0.5
+default_color = Color(0, 0, 0, 1)

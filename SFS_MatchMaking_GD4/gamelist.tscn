@@ -1,0 +1,99 @@
+[gd_scene load_steps=11 format=3 uid="uid://b86ug3srr1am5"]
+
+[ext_resource type="Script" path="res://scripts/GameListItem.cs" id="1_xand7"]
+[ext_resource type="FontFile" uid="uid://b11qhqw5ioane" path="res://fonts/ARIALBD.TTF" id="2_2ckoc"]
+[ext_resource type="FontFile" uid="uid://q4tvl3dc7vp" path="res://fonts/ARIAL.TTF" id="2_eo28d"]
+[ext_resource type="Texture2D" uid="uid://nix4mnow62nn" path="res://images/icons/play.png" id="2_ssocv"]
+[ext_resource type="Texture2D" uid="uid://dyddbkhjfr180" path="res://images/icons/watch.png" id="3_ovjmt"]
+[ext_resource type="Texture2D" uid="uid://3ncfoud7sp" path="res://images/icons/play-greyed.png" id="3_ucnkg"]
+[ext_resource type="Texture2D" uid="uid://cm76jwtkv8ldd" path="res://images/icons/watch-greyed.png" id="5_mxfhd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_btwex"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_scdi3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qeahf"]
+
+[node name="GameList" type="Control"]
+layout_mode = 3
+anchor_right = 0.456
+anchor_bottom = 0.128
+offset_right = -192.64
+offset_bottom = -7.68001
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameListItem" type="Control" parent="." node_paths=PackedStringArray("playButton", "watchButton", "nameText", "detailsText")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.879
+anchor_bottom = 1.0
+offset_right = 16.144
+offset_bottom = -8.0
+script = ExtResource("1_xand7")
+playButton = NodePath("PlayButton")
+watchButton = NodePath("WatchButton")
+nameText = NodePath("RoomName")
+detailsText = NodePath("UserSlots")
+statusPlay = ExtResource("2_ssocv")
+statusPlayGreyed = ExtResource("3_ucnkg")
+statusWatch = ExtResource("3_ovjmt")
+statusWatchGreyed = ExtResource("5_mxfhd")
+
+[node name="RoomName" type="LineEdit" parent="GameListItem"]
+layout_mode = 2
+offset_left = -2.0
+offset_top = -8.0
+offset_right = 312.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2ckoc")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_btwex")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_scdi3")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_qeahf")
+editable = false
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+
+[node name="UserSlots" type="RichTextLabel" parent="GameListItem"]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 280.0
+offset_bottom = 88.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_eo28d")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+
+[node name="PlayButton" type="TextureButton" parent="GameListItem"]
+layout_mode = 2
+offset_left = 320.0
+offset_top = 24.0
+offset_right = 360.0
+offset_bottom = 64.0
+texture_normal = ExtResource("2_ssocv")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="WatchButton" type="TextureButton" parent="GameListItem"]
+layout_mode = 2
+offset_left = 372.0
+offset_top = 25.0
+offset_right = 412.0
+offset_bottom = 65.0
+texture_normal = ExtResource("3_ovjmt")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Line2D2" type="Line2D" parent="GameListItem"]
+position = Vector2(-1.63797, 79.75)
+scale = Vector2(0.668716, 8.5)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 0.5
+default_color = Color(0, 0, 0, 1)

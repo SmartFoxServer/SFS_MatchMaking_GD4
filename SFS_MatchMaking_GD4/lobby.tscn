@@ -1,0 +1,1788 @@
+[gd_scene load_steps=58 format=3 uid="uid://dekckhb5u12el"]
+
+[ext_resource type="Script" path="res://scripts/LobbyManager.cs" id="1_y3kng"]
+[ext_resource type="Texture2D" uid="uid://cihiay168twy4" path="res://images/footer-bg.png" id="2_us3vg"]
+[ext_resource type="PackedScene" uid="uid://b86ug3srr1am5" path="res://gamelist.tscn" id="2_ylsae"]
+[ext_resource type="PackedScene" uid="uid://ru6is162lspu" path="res://buddylist.tscn" id="3_m26pv"]
+[ext_resource type="Texture2D" uid="uid://djsn52q7i4mxo" path="res://images/logo-sfs.png" id="3_uuu55"]
+[ext_resource type="FontFile" uid="uid://swky6glti8em" path="res://fonts/BebasNeue-Regular.ttf" id="7_ec57b"]
+[ext_resource type="Texture2D" uid="uid://bn6drg0urf1il" path="res://images/buttonPressed.png" id="7_jkvud"]
+[ext_resource type="Script" path="res://scripts/TextureButtonScript.cs" id="8_hv4pb"]
+[ext_resource type="Texture2D" uid="uid://dorcvos038u3b" path="res://images/icons/user.png" id="10_npolx"]
+[ext_resource type="Texture2D" uid="uid://b6ding8s2lwrh" path="res://images/icons/userpressed.png" id="11_w10k6"]
+[ext_resource type="Texture2D" uid="uid://ci4aecbxkl25l" path="res://images/icons/dismiss.png" id="12_geeqi"]
+[ext_resource type="Script" path="res://scripts/LineEditScript.cs" id="13_025rq"]
+[ext_resource type="Texture2D" uid="uid://cu2o68uutnxyl" path="res://images/buttonNormal.png" id="13_hx80o"]
+[ext_resource type="FontFile" uid="uid://q4tvl3dc7vp" path="res://fonts/ARIAL.TTF" id="13_rlsuu"]
+[ext_resource type="FontFile" uid="uid://b11qhqw5ioane" path="res://fonts/ARIALBD.TTF" id="14_xueji"]
+[ext_resource type="FontFile" uid="uid://cmxyp6cxu6apc" path="res://fonts/ARIALI.TTF" id="15_4pan8"]
+[ext_resource type="Script" path="res://scripts/UserProfile.cs" id="17_381oj"]
+[ext_resource type="Texture2D" uid="uid://ba4u1jsbrimcf" path="res://images/buttonNormalLarge.png" id="21_4jqxf"]
+[ext_resource type="PackedScene" uid="uid://cmytoh4q8nuco" path="res://invitelist.tscn" id="22_cjswg"]
+[ext_resource type="Texture2D" uid="uid://b8gumkyhd86u4" path="res://images/buttonPressedLarge.png" id="22_dx227"]
+[ext_resource type="Script" path="res://scripts/StartGame.cs" id="22_qdfq2"]
+[ext_resource type="Texture2D" uid="uid://btc50035dcsix" path="res://images/icons/starchecked.png" id="25_dlfsk"]
+[ext_resource type="Texture2D" uid="uid://cqslq5a52qf7d" path="res://images/icons/starunchecked.png" id="26_blgf1"]
+[ext_resource type="Script" path="res://scripts/InvitationPanel.cs" id="26_paldw"]
+[ext_resource type="Texture2D" uid="uid://fdou5kj2pavs" path="res://images/icons/checkedbox.png" id="26_s3408"]
+[ext_resource type="Texture2D" uid="uid://dbwx4axb8ohpu" path="res://images/icons/uncheckedbox.png" id="26_ynee5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7ik53"]
+font = ExtResource("13_rlsuu")
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l2chi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_htwdb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pbpex"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7iln1"]
+line_spacing = 1.0
+font = ExtResource("7_ec57b")
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_unned"]
+content_margin_top = 10.0
+content_margin_bottom = 90.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4iqqt"]
+content_margin_top = 10.0
+content_margin_bottom = 90.0
+draw_center = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ayjmp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3umhp"]
+content_margin_left = 10.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_3y4gx"]
+line_spacing = 0.0
+font = ExtResource("7_ec57b")
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cuivn"]
+line_spacing = -10.0
+font = ExtResource("7_ec57b")
+font_size = 27
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_blvvd"]
+font = ExtResource("7_ec57b")
+font_size = 47
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ryi1e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0hde"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_a08sw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kyyo5"]
+font = ExtResource("14_xueji")
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cyg18"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmh35"]
+content_margin_left = 10.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4m8ck"]
+content_margin_left = 10.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="SyntaxHighlighter" id="SyntaxHighlighter_h73ca"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6rfu"]
+content_margin_left = 10.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tapkx"]
+font = ExtResource("14_xueji")
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_23ak2"]
+font = ExtResource("15_4pan8")
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brwfp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pd37c"]
+draw_center = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_uween"]
+font = ExtResource("13_rlsuu")
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjnue"]
+content_margin_bottom = 90.0
+draw_center = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_qlgw1"]
+font = ExtResource("13_rlsuu")
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qx4k1"]
+font = ExtResource("14_xueji")
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xjam8"]
+font = ExtResource("13_rlsuu")
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tu0qn"]
+font = ExtResource("13_rlsuu")
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[node name="Lobby" type="Control" node_paths=PackedStringArray("loginPanel", "loggedInAsLabel", "userStatusLabel", "userProfileText", "warningPopup", "warningText", "scrollContainer", "startGamePanel", "buddyNameInput", "messageInput", "chatTextArea", "nameLabel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y3kng")
+loginPanel = NodePath("BackGround/Main Panel")
+loggedInAsLabel = NodePath("BackGround/Footer/userLabel")
+userStatusLabel = NodePath("BackGround/Main Panel/User Status Label")
+userProfileText = NodePath("User Profile Panel/BackGround/userProfile")
+warningPopup = NodePath("Warning Panel")
+warningText = NodePath("Warning Panel/BackGround/warningText")
+gameListScene = ExtResource("2_ylsae")
+scrollContainer = NodePath("BackGround/Main Panel/HBox/VBox1/Active Games/ScrollContainer")
+startGamePanel = NodePath("Start Game Panel")
+buddyNameInput = NodePath("BackGround/Main Panel/HBox/VBox2/Buddies/Buddy Name Input")
+buddyListScene = ExtResource("3_m26pv")
+messageInput = NodePath("BackGround/Main Panel/HBox/VBox3/Chat Panel/GameChat/Message Input")
+chatTextArea = NodePath("BackGround/Main Panel/HBox/VBox3/Chat Panel/GameChat/RichTextLabel")
+nameLabel = NodePath("BackGround/Main Panel/HBox/VBox3/Chat Panel/GameChat/Buddy Name")
+
+[node name="BackGround" type="ColorRect" parent="."]
+process_mode = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 4.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(1, 0.603922, 0, 1)
+
+[node name="Footer" type="TextureRect" parent="BackGround"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -90.0
+offset_right = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_us3vg")
+expand_mode = 5
+
+[node name="SFSLogo" type="TextureRect" parent="BackGround/Footer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.739736
+anchor_top = 0.10874
+anchor_right = 0.988
+anchor_bottom = 0.822679
+offset_left = 0.739746
+offset_top = 12.6326
+offset_right = 0.983643
+offset_bottom = 12.6666
+texture = ExtResource("3_uuu55")
+expand_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Logout  Button" type="TextureButton" parent="BackGround/Footer" node_paths=PackedStringArray("button", "scriptNode")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.312
+anchor_right = 0.194
+anchor_bottom = 0.844
+offset_left = -0.548002
+offset_top = -0.158001
+offset_right = -0.136017
+offset_bottom = -0.171005
+grow_vertical = 0
+texture_normal = ExtResource("13_hx80o")
+texture_pressed = ExtResource("7_jkvud")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_hv4pb")
+button = NodePath(".")
+scriptNode = NodePath("../../..")
+callbackName = "OnLogoutButtonClick"
+
+[node name="Label" type="Label" parent="BackGround/Footer/Logout  Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.933
+anchor_bottom = 0.833
+offset_left = -8.0
+offset_top = 2.0
+offset_right = 9.81256
+offset_bottom = 10.1268
+text = "Logout"
+label_settings = SubResource("LabelSettings_7ik53")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="userLabel" type="LineEdit" parent="BackGround/Footer"]
+z_as_relative = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.211
+anchor_top = 0.401
+anchor_right = 0.5
+anchor_bottom = 0.756
+offset_left = -8.68402
+offset_top = -8.19025
+offset_right = 6.0
+offset_bottom = 7.771
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_uneditable_color = Color(0.8, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l2chi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_htwdb")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_pbpex")
+editable = false
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+
+[node name="Main Panel" type="Control" parent="BackGround"]
+process_mode = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="User Profile  Button" type="TextureButton" parent="BackGround/Main Panel" node_paths=PackedStringArray("button", "scriptNode")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.936
+anchor_top = 0.032
+anchor_right = 0.97
+anchor_bottom = 0.097
+offset_left = 0.415894
+offset_top = 0.191999
+offset_right = -0.680176
+offset_bottom = -0.167999
+grow_horizontal = 0
+texture_normal = ExtResource("10_npolx")
+texture_pressed = ExtResource("11_w10k6")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_hv4pb")
+button = NodePath(".")
+scriptNode = NodePath("../../..")
+callbackName = "OnUserIconClick"
+
+[node name="User Status Label" type="Label" parent="BackGround/Main Panel"]
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 40.0
+offset_right = 1336.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_rlsuu")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 2
+
+[node name="HBox" type="HBoxContainer" parent="BackGround/Main Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.129
+anchor_right = 1.0
+anchor_bottom = 0.978
+offset_left = -0.664001
+offset_top = 8.024
+offset_right = -4.0
+offset_bottom = -7.63202
+theme_override_constants/separation = 500
+alignment = 1
+
+[node name="VBox1" type="VBoxContainer" parent="BackGround/Main Panel/HBox"]
+layout_mode = 2
+
+[node name="Active Games" type="Control" parent="BackGround/Main Panel/HBox/VBox1"]
+process_mode = 1
+layout_mode = 2
+
+[node name="Title" type="Label" parent="BackGround/Main Panel/HBox/VBox1/Active Games"]
+layout_mode = 2
+offset_left = -295.354
+offset_top = 32.0
+offset_right = -36.3542
+offset_bottom = 105.0
+grow_horizontal = 2
+text = "Active Games"
+label_settings = SubResource("LabelSettings_7iln1")
+vertical_alignment = 1
+
+[node name="Line2D3" type="Line2D" parent="BackGround/Main Panel/HBox/VBox1/Active Games"]
+position = Vector2(-293.944, 99.0001)
+scale = Vector2(0.679121, 4.5)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 0.5
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D4" type="Line2D" parent="BackGround/Main Panel/HBox/VBox1/Active Games"]
+position = Vector2(-295, 540)
+scale = Vector2(0.666641, 4.5)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 0.5
+default_color = Color(0, 0, 0, 1)
+
+[node name="Start Game  Button" type="TextureButton" parent="BackGround/Main Panel/HBox/VBox1/Active Games" node_paths=PackedStringArray("button", "scriptNode")]
+layout_mode = 2
+offset_left = -302.0
+offset_top = 552.0
+offset_right = -92.0
+offset_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("13_hx80o")
+texture_pressed = ExtResource("7_jkvud")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_hv4pb")
+button = NodePath(".")
+scriptNode = NodePath("../../../../../..")
+callbackName = "OnStartGameButtonClick"
+
+[node name="Label" type="Label" parent="BackGround/Main Panel/HBox/VBox1/Active Games/Start Game  Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.933
+anchor_bottom = 0.833
+offset_left = -4.0
+offset_right = 16.07
+offset_bottom = 8.016
+text = "Start Game"
+label_settings = SubResource("LabelSettings_7ik53")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quck Join  Button" type="TextureButton" parent="BackGround/Main Panel/HBox/VBox1/Active Games" node_paths=PackedStringArray("button", "scriptNode")]
+layout_mode = 2
+offset_left = -81.0
+offset_top = 552.0
+offset_right = 129.0
+offset_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("13_hx80o")
+texture_pressed = ExtResource("7_jkvud")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_hv4pb")
+button = NodePath(".")
+scriptNode = NodePath("../../../../../..")
+callbackName = "OnQuickJoinButtonClick"
+
+[node name="Label" type="Label" parent="BackGround/Main Panel/HBox/VBox1/Active Games/Quck Join  Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.933
+anchor_bottom = 0.833
+offset_left = -1.0
+offset_right = 7.06999
+offset_bottom = 8.016
+text = "Quick Join"
+label_settings = SubResource("LabelSettings_7ik53")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BackGround/Main Panel/HBox/VBox1/Active Games"]
+process_mode = 3
+layout_mode = 2
+offset_left = -295.0
+offset_top = 111.0
+offset_right = 148.0
+offset_bottom = 519.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_unned")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackGround/Main Panel/HBox/VBox1/Active Games/ScrollContainer"]
+process_mode = 3
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 100
+
+[node name="VBox2" type="VBoxContainer" parent="BackGround/Main Panel/HBox"]
+layout_mode = 2
+
+[node name="Buddies" type="Control" parent="BackGround/Main Panel/HBox/VBox2"]
+process_mode = 1
+layout_mode = 2
+
+[node name="Title" type="Label" parent="BackGround/Main Panel/HBox/VBox2/Buddies"]
+layout_mode = 2
+offset_left = -207.354
+offset_top = 32.0
+offset_right = 51.6455
+offset_bottom = 105.0
+grow_horizontal = 2
+text = "Buddies"
+label_settings = SubResource("LabelSettings_7iln1")
+vertical_alignment = 1
+
+[node name="Line2D2" type="Line2D" parent="BackGround/Main Panel/HBox/VBox2/Buddies"]
+position = Vector2(-196, 540)
+scale = Vector2(0.666641, 4.5)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 0.5
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D5" type="Line2D" parent="BackGround/Main Panel/HBox/VBox2/Buddies"]
+position = Vector2(-204.944, 99.0001)
+scale = Vector2(0.679121, 4.5)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 0.5
+default_color = Color(0, 0, 0, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BackGround/Main Panel/HBox/VBox2/Buddies"]
+process_mode = 3
+layout_mode = 2
+offset_left = -199.0
+offset_top = 112.0
+offset_right = 236.0
+offset_bottom = 512.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4iqqt")
+follow_focus = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackGround/Main Panel/HBox/VBox2/Buddies/ScrollContainer"]
+process_mode = 3
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 100
+
+[node name="Buddy Name Input" type="LineEdit" parent="BackGround/Main Panel/HBox/VBox2/Buddies" node_paths=PackedStringArray("lineEdit", "scriptNode")]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_ayjmp")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -199.0
+offset_top = 552.0
+offset_right = 57.0
+offset_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.270588)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_rlsuu")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_3umhp")
+placeholder_text = "  Name"
+caret_blink = true
+script = ExtResource("13_025rq")
+lineEdit = NodePath(".")
+scriptNode = NodePath("../../../../../..")
+callbackName = "OnAddBuddyButtonClick"
+
+[node name="Add Buddy Button" type="TextureButton" parent="BackGround/Main Panel/HBox/VBox2/Buddies" node_paths=PackedStringArray("button", "scriptNode")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.754
+anchor_top = 0.915
+anchor_right = 0.947
+anchor_bottom = 0.976
+offset_left = 74.0
+offset_top = 552.0
+offset_right = 224.0
+offset_bottom = 600.0
+grow_vertical = 0
+texture_normal = ExtResource("13_hx80o")
+texture_pressed = ExtResource("7_jkvud")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_hv4pb")
+button = NodePath(".")
+scriptNode = NodePath("../../../../../..")
+callbackName = "OnAddBuddyButtonClick"
+
+[node name="Label" type="Label" parent="BackGround/Main Panel/HBox/VBox2/Buddies/Add Buddy Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.933
+anchor_bottom = 0.833
+offset_left = -6.0
+offset_right = 10.576
+offset_bottom = 8.016
+text = "Add Buddy"
+label_settings = SubResource("LabelSettings_7ik53")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBox3" type="VBoxContainer" parent="BackGround/Main Panel/HBox"]
+visible = false
+layout_mode = 2
+
+[node name="Chat Panel" type="Control" parent="BackGround/Main Panel/HBox/VBox3"]
+process_mode = 1
+layout_mode = 2
+
+[node name="GameChat" type="ColorRect" parent="BackGround/Main Panel/HBox/VBox3/Chat Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.039
+anchor_right = 0.981
+anchor_bottom = 0.039
+offset_left = -112.0
+offset_right = 304.0
+offset_bottom = 608.0
+color = Color(0.85098, 0.509804, 0, 1)
+
+[node name="ReferenceRect" type="ReferenceRect" parent="BackGround/Main Panel/HBox/VBox3/Chat Panel/GameChat"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = -304.0
+offset_right = 208.0
+offset_bottom = 304.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0, 0, 0, 1)
+border_width = 2.0
+editor_only = false
+
+[node name="Label" type="Label" parent="BackGround/Main Panel/HBox/VBox3/Chat Panel/GameChat"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.982
+anchor_bottom = 0.155
+offset_left = 16.0
+offset_top = 32.0
+offset_right = -295.512
+offset_bottom = 13.76
+text = "Chat"
+label_settings = SubResource("LabelSettings_3y4gx")
+
+[node name="Buddy Name" type="Label" parent="BackGround/Main Panel/HBox/VBox3/Chat Panel/GameChat"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.982
+anchor_bottom = 0.155
+offset_left = 120.0
+offset_top = 37.0
+offset_right = -72.512
+offset_bottom = 6.76
+text = "with
+Username"
+label_settings = SubResource("LabelSettings_cuivn")
+
+[node name="Line2D" type="Line2D" parent="BackGround/Main Panel/HBox/VBox3/Chat Panel/GameChat"]
+position = Vector2(18.8996, 101.438)
+scale = Vector2(0.586175, 5.12402)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 0.5
+default_color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BackGround/Main Panel/HBox/VBox3/Chat Panel/GameChat"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.088
+anchor_top = 0.202
+anchor_right = 0.93
+anchor_bottom = 0.857
+offset_left = -16.736
+offset_top = 2.032
+offset_right = -1.95999
+offset_bottom = 19.512
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("13_rlsuu")
+theme_override_fonts/bold_font = ExtResource("14_xueji")
+theme_override_fonts/italics_font = ExtResource("15_4pan8")
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 22
+theme_override_font_sizes/italics_font_size = 22
+theme_override_font_sizes/bold_italics_font_size = 22
+theme_override_font_sizes/mono_font_size = 22
+bbcode_enabled = true
+scroll_following = true
+
+[node name="Message Input" type="LineEdit" parent="BackGround/Main Panel/HBox/VBox3/Chat Panel/GameChat" node_paths=PackedStringArray("lineEdit", "scriptNode")]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_ayjmp")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 248.0
+offset_right = 80.0
+offset_bottom = 296.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.270588)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_rlsuu")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_3umhp")
+placeholder_text = " Your Message"
+caret_blink = true
+script = ExtResource("13_025rq")
+lineEdit = NodePath(".")
+scriptNode = NodePath("../../../../../../..")
+callbackName = "OnSendMessageButtonClick"
+
+[node name="Send Button" type="TextureButton" parent="BackGround/Main Panel/HBox/VBox3/Chat Panel/GameChat" node_paths=PackedStringArray("button", "scriptNode")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.754
+anchor_top = 0.915
+anchor_right = 0.947
+anchor_bottom = 0.976
+offset_left = -9.664
+offset_top = -5.32001
+offset_right = 8.04797
+offset_bottom = 6.59198
+grow_vertical = 0
+texture_normal = ExtResource("13_hx80o")
+texture_pressed = ExtResource("7_jkvud")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_hv4pb")
+button = NodePath(".")
+scriptNode = NodePath("../../../../../../..")
+callbackName = "OnSendMessageButtonClick"
+
+[node name="Label" type="Label" parent="BackGround/Main Panel/HBox/VBox3/Chat Panel/GameChat/Send Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.933
+anchor_bottom = 0.833
+offset_left = -6.0
+offset_right = 10.576
+offset_bottom = 8.016
+text = "Send"
+label_settings = SubResource("LabelSettings_7ik53")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line2D3" type="Line2D" parent="BackGround/Main Panel/HBox/VBox3/Chat Panel/GameChat"]
+position = Vector2(18.6418, 540)
+scale = Vector2(0.587078, 4.5)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 0.5
+default_color = Color(0, 0, 0, 1)
+
+[node name="closeChatButton" type="TextureButton" parent="BackGround/Main Panel/HBox/VBox3/Chat Panel/GameChat" node_paths=PackedStringArray("button", "scriptNode")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_top = 8.00002
+offset_right = -11.0
+offset_bottom = 38.0
+grow_horizontal = 0
+texture_normal = ExtResource("12_geeqi")
+stretch_mode = 0
+script = ExtResource("8_hv4pb")
+button = NodePath(".")
+scriptNode = NodePath("../../../../../../..")
+callbackName = "OnCloseButtonClick"
+
+[node name="User Profile Panel" type="Control" parent="." node_paths=PackedStringArray("LobbyManagerNode", "usernameLabel", "onlineToggle", "nickInput", "yearInput", "moodInput", "stateDropdown", "expDropdown", "expCheckbox1", "expCheckbox2", "expCheckbox3", "expCheckbox4", "expCheckbox5")]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -592.0
+offset_top = -341.0
+offset_right = 584.0
+offset_bottom = 211.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("17_381oj")
+LobbyManagerNode = NodePath("..")
+usernameLabel = NodePath("BackGround/userProfile")
+onlineToggle = NodePath("BackGround/CheckBox")
+nickInput = NodePath("BackGround/Name Input")
+yearInput = NodePath("BackGround/Year Input")
+moodInput = NodePath("BackGround/Mood Input")
+stateDropdown = NodePath("BackGround/State Input")
+expDropdown = NodePath("BackGround/Experience Input")
+expCheckbox1 = NodePath("BackGround/Star1")
+expCheckbox2 = NodePath("BackGround/Star2")
+expCheckbox3 = NodePath("BackGround/Star3")
+expCheckbox4 = NodePath("BackGround/Star4")
+expCheckbox5 = NodePath("BackGround/Star5")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="User Profile Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -586.0
+offset_top = -264.0
+offset_right = 598.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0, 0, 0, 1)
+border_width = 4.0
+editor_only = false
+
+[node name="BackGround" type="ColorRect" parent="User Profile Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 13.0
+offset_right = 8.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.85098, 0.509804, 0, 1)
+
+[node name="closePopupButton" type="TextureButton" parent="User Profile Panel/BackGround" node_paths=PackedStringArray("button", "scriptNode")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.007
+anchor_right = 1.0
+anchor_bottom = 0.983
+offset_left = 1123.74
+offset_top = 16.0
+offset_right = -20.0
+offset_bottom = -486.888
+grow_horizontal = 0
+texture_normal = ExtResource("12_geeqi")
+stretch_mode = 0
+script = ExtResource("8_hv4pb")
+button = NodePath(".")
+scriptNode = NodePath("../../..")
+callbackName = "OnUserIconCloseClick"
+
+[node name="popupTitle" type="Label" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 279.0
+offset_bottom = 93.0
+text = "User Profile"
+label_settings = SubResource("LabelSettings_7iln1")
+
+[node name="userProfile" type="LineEdit" parent="User Profile Panel/BackGround"]
+z_as_relative = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 96.0
+offset_right = -34.0
+offset_bottom = -408.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l2chi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_htwdb")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_pbpex")
+placeholder_text = "Username...."
+editable = false
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+
+[node name="Line2D" type="Line2D" parent="User Profile Panel/BackGround"]
+position = Vector2(36.595, 85)
+scale = Vector2(1.71963, -3)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="popupTitle2" type="Label" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 32.0
+offset_top = 176.0
+offset_right = 281.0
+offset_bottom = 237.0
+text = "Buddy Profile"
+label_settings = SubResource("LabelSettings_blvvd")
+
+[node name="popupTitle3" type="Label" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 616.0
+offset_top = 176.0
+offset_right = 865.0
+offset_bottom = 237.0
+text = "Player Profile"
+label_settings = SubResource("LabelSettings_blvvd")
+
+[node name="Line2D2" type="Line2D" parent="User Profile Panel/BackGround"]
+position = Vector2(32, 232)
+scale = Vector2(0.848, 2)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D3" type="Line2D" parent="User Profile Panel/BackGround"]
+position = Vector2(617, 232)
+scale = Vector2(0.848, 2)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="CheckBox" type="CheckBox" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.007
+anchor_bottom = 1.0
+offset_left = 460.0
+offset_top = 186.0
+offset_right = -616.26
+offset_bottom = -310.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_rlsuu")
+theme_override_font_sizes/font_size = 24
+theme_override_icons/checked = ExtResource("26_s3408")
+theme_override_icons/unchecked = ExtResource("26_ynee5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ryi1e")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t0hde")
+text = "Online"
+icon = SubResource("ImageTexture_a08sw")
+flat = true
+icon_alignment = 2
+expand_icon = true
+
+[node name="NickNameLabel" type="Label" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 32.0
+offset_top = 272.0
+offset_right = 168.0
+offset_bottom = 305.0
+text = "NickName:"
+label_settings = SubResource("LabelSettings_kyyo5")
+
+[node name="ExperienceLabel" type="Label" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 624.0
+offset_top = 272.0
+offset_right = 760.0
+offset_bottom = 305.0
+text = "Experience:"
+label_settings = SubResource("LabelSettings_kyyo5")
+
+[node name="RankingLabel" type="Label" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 624.0
+offset_top = 328.0
+offset_right = 760.0
+offset_bottom = 361.0
+text = "Ranking:"
+label_settings = SubResource("LabelSettings_kyyo5")
+
+[node name="BirthYearLabel" type="Label" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 32.0
+offset_top = 328.0
+offset_right = 168.0
+offset_bottom = 361.0
+text = "Birth Year:"
+label_settings = SubResource("LabelSettings_kyyo5")
+
+[node name="MoodLabel" type="Label" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 32.0
+offset_top = 390.0
+offset_right = 168.0
+offset_bottom = 423.0
+text = "Mood:"
+label_settings = SubResource("LabelSettings_kyyo5")
+
+[node name="StateLabel" type="Label" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 32.0
+offset_top = 478.0
+offset_right = 168.0
+offset_bottom = 511.0
+text = "State:"
+label_settings = SubResource("LabelSettings_kyyo5")
+
+[node name="Name Input" type="LineEdit" parent="User Profile Panel/BackGround"]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_cyg18")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -418.0
+offset_top = -12.0
+offset_right = -26.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.270588)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_hmh35")
+placeholder_text = "  Your Name"
+caret_blink = true
+
+[node name="Year Input" type="LineEdit" parent="User Profile Panel/BackGround"]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_cyg18")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -416.0
+offset_top = 47.0
+offset_right = -24.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.270588)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_hmh35")
+placeholder_text = "  Birth Year"
+max_length = 4
+caret_blink = true
+
+[node name="Mood Input" type="TextEdit" parent="User Profile Panel/BackGround"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 384.0
+offset_right = 568.0
+offset_bottom = 456.0
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_readonly_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.701961, 0.701961, 0.701961, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_rlsuu")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_4m8ck")
+theme_override_styles/focus = SubResource("StyleBoxFlat_4m8ck")
+placeholder_text = "  Mood Input"
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+highlight_all_occurrences = true
+syntax_highlighter = SubResource("SyntaxHighlighter_h73ca")
+caret_blink = true
+caret_blink_interval = 0.7
+
+[node name="State Input" type="OptionButton" parent="User Profile Panel/BackGround"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 469.0
+offset_right = 568.0
+offset_bottom = 517.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_rlsuu")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxFlat_l6rfu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l6rfu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l6rfu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l6rfu")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_l6rfu")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_l6rfu")
+item_count = 3
+selected = 0
+popup/item_0/text = "Available"
+popup/item_0/id = 0
+popup/item_1/text = "Away"
+popup/item_1/id = 1
+popup/item_2/text = "Occupied"
+popup/item_2/id = 2
+
+[node name="Experience Input" type="OptionButton" parent="User Profile Panel/BackGround"]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 260.0
+offset_right = 1146.0
+offset_bottom = 308.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_rlsuu")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxFlat_l6rfu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l6rfu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l6rfu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l6rfu")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_l6rfu")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_l6rfu")
+item_count = 4
+selected = 0
+popup/item_0/text = "Novice"
+popup/item_0/id = 0
+popup/item_1/text = "Regular"
+popup/item_1/id = 1
+popup/item_2/text = "Expert"
+popup/item_2/id = 2
+popup/item_3/text = "Master"
+popup/item_3/id = 3
+
+[node name="Star5" type="CheckBox" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.024
+anchor_bottom = 0.06
+offset_left = 980.0
+offset_top = 320.0
+offset_right = 999.68
+offset_bottom = 335.84
+theme_override_icons/checked = ExtResource("25_dlfsk")
+theme_override_icons/unchecked = ExtResource("26_blgf1")
+action_mode = 0
+flat = true
+
+[node name="Star4" type="CheckBox" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.024
+anchor_bottom = 0.06
+offset_left = 930.0
+offset_top = 320.0
+offset_right = 949.68
+offset_bottom = 335.84
+theme_override_icons/checked = ExtResource("25_dlfsk")
+theme_override_icons/unchecked = ExtResource("26_blgf1")
+action_mode = 0
+flat = true
+
+[node name="Star3" type="CheckBox" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.024
+anchor_bottom = 0.06
+offset_left = 880.0
+offset_top = 320.0
+offset_right = 899.68
+offset_bottom = 335.84
+theme_override_icons/checked = ExtResource("25_dlfsk")
+theme_override_icons/unchecked = ExtResource("26_blgf1")
+action_mode = 0
+flat = true
+
+[node name="Star2" type="CheckBox" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.024
+anchor_bottom = 0.06
+offset_left = 830.0
+offset_top = 320.0
+offset_right = 849.68
+offset_bottom = 335.84
+theme_override_icons/checked = ExtResource("25_dlfsk")
+theme_override_icons/unchecked = ExtResource("26_blgf1")
+action_mode = 0
+flat = true
+
+[node name="Star1" type="CheckBox" parent="User Profile Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.024
+anchor_bottom = 0.06
+offset_left = 780.0
+offset_top = 320.0
+offset_right = 799.68
+offset_bottom = 335.84
+theme_override_icons/checked = ExtResource("25_dlfsk")
+theme_override_icons/unchecked = ExtResource("26_blgf1")
+action_mode = 0
+flat = true
+
+[node name="Start Game Panel" type="Control" parent="." node_paths=PackedStringArray("LobbyManagerNode", "expText", "rankText", "publicToggle", "invitationMessageInput", "InviteList")]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -592.0
+offset_top = -341.0
+offset_right = 584.0
+offset_bottom = 211.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("22_qdfq2")
+LobbyManagerNode = NodePath("..")
+expText = NodePath("BackGround/GameExpLabel/GameExp")
+rankText = NodePath("BackGround/GameRankLabel/Ranking")
+publicToggle = NodePath("BackGround/PublicCheckBox")
+invitationMessageInput = NodePath("BackGround/Invite Input")
+InviteList = NodePath("BackGround/ScrollContainer/VBoxContainer")
+inviteListScene = ExtResource("22_cjswg")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Start Game Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -586.0
+offset_top = -260.0
+offset_right = 598.0
+offset_bottom = 284.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0, 0, 0, 1)
+border_width = 4.0
+editor_only = false
+
+[node name="BackGround" type="ColorRect" parent="Start Game Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 16.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.85098, 0.509804, 0, 1)
+
+[node name="closePopupButton" type="TextureButton" parent="Start Game Panel/BackGround" node_paths=PackedStringArray("button", "scriptNode")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.007
+anchor_right = 1.0
+anchor_bottom = 0.983
+offset_left = 1123.74
+offset_top = 16.0
+offset_right = -20.0
+offset_bottom = -486.888
+grow_horizontal = 0
+texture_normal = ExtResource("12_geeqi")
+stretch_mode = 0
+script = ExtResource("8_hv4pb")
+button = NodePath(".")
+scriptNode = NodePath("../../..")
+callbackName = "OnStartGameCloseClick"
+
+[node name="popupTitle" type="Label" parent="Start Game Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 279.0
+offset_bottom = 93.0
+text = "Start New Game"
+label_settings = SubResource("LabelSettings_7iln1")
+
+[node name="Line2D" type="Line2D" parent="Start Game Panel/BackGround"]
+position = Vector2(36.595, 85)
+scale = Vector2(1.71963, -3)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D2" type="Line2D" parent="Start Game Panel/BackGround"]
+position = Vector2(48.0512, 276)
+scale = Vector2(0.810243, 2)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="PublicCheckBox" type="CheckBox" parent="Start Game Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.007
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = 102.0
+offset_right = -856.26
+offset_bottom = -394.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_rlsuu")
+theme_override_font_sizes/font_size = 26
+theme_override_icons/checked = ExtResource("26_s3408")
+theme_override_icons/unchecked = ExtResource("26_ynee5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ryi1e")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t0hde")
+button_pressed = true
+text = " Game is public"
+icon = SubResource("ImageTexture_a08sw")
+flat = true
+icon_alignment = 2
+expand_icon = true
+
+[node name="InvitationLabel" type="Label" parent="Start Game Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 611.0
+offset_top = 108.0
+offset_right = 1004.0
+offset_bottom = 141.0
+text = "Invitation message:"
+label_settings = SubResource("LabelSettings_kyyo5")
+
+[node name="MatchingLabel" type="Label" parent="Start Game Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 41.0
+offset_top = 156.0
+offset_right = 253.0
+offset_bottom = 189.0
+text = "Matching criteria"
+label_settings = SubResource("LabelSettings_tapkx")
+
+[node name="BuddyLabel" type="Label" parent="Start Game Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 612.0
+offset_top = 214.0
+offset_right = 804.0
+offset_bottom = 247.0
+text = "Invite Avaliable Buddy:"
+label_settings = SubResource("LabelSettings_kyyo5")
+
+[node name="GameExpLabel" type="Label" parent="Start Game Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 42.0
+offset_top = 197.0
+offset_right = 178.0
+offset_bottom = 230.0
+text = "Experience:"
+label_settings = SubResource("LabelSettings_23ak2")
+
+[node name="GameExp" type="LineEdit" parent="Start Game Panel/BackGround/GameExpLabel"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = -5.0
+offset_right = 506.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_rlsuu")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_brwfp")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_pd37c")
+editable = false
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+
+[node name="GameRankLabel" type="Label" parent="Start Game Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 42.0
+offset_top = 236.0
+offset_right = 178.0
+offset_bottom = 269.0
+text = "Ranking:"
+label_settings = SubResource("LabelSettings_23ak2")
+
+[node name="Ranking" type="LineEdit" parent="Start Game Panel/BackGround/GameRankLabel"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = -5.0
+offset_right = 506.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_rlsuu")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_brwfp")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_pd37c")
+editable = false
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+
+[node name="Invite Input" type="LineEdit" parent="Start Game Panel/BackGround"]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_cyg18")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 22.0
+offset_top = -119.0
+offset_right = 534.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.270588)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_rlsuu")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_hmh35")
+text = "Do you want to join my game?"
+placeholder_text = "Invitation"
+caret_blink = true
+
+[node name="Start Game  Button" type="TextureButton" parent="Start Game Panel/BackGround" node_paths=PackedStringArray("button", "scriptNode")]
+layout_mode = 2
+offset_left = 36.0
+offset_top = 456.0
+offset_right = 1140.0
+offset_bottom = 528.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("21_4jqxf")
+texture_pressed = ExtResource("22_dx227")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_hv4pb")
+button = NodePath(".")
+scriptNode = NodePath("../..")
+callbackName = "OnStartGameConfirmClick"
+
+[node name="Label" type="Label" parent="Start Game Panel/BackGround/Start Game  Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.978
+anchor_bottom = 0.833
+offset_left = -1.0
+offset_right = 8.28796
+offset_bottom = 8.024
+text = "Start Game"
+label_settings = SubResource("LabelSettings_uween")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Start Game Panel/BackGround"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 288.0
+offset_right = 576.0
+offset_bottom = 454.0
+theme_override_colors/background_color = Color(0.85098, 0.509804, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_readonly_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("13_rlsuu")
+theme_override_font_sizes/font_size = 24
+text = "If game is private, automatic invitations will be sent based on the matching criteria to fill the available player slot. Force invitation to be sent to a buddy (overriding the matching criteria) by selecting their name on the right."
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Start Game Panel/BackGround"]
+process_mode = 3
+layout_mode = 2
+offset_left = 620.0
+offset_top = 264.0
+offset_right = 1116.0
+offset_bottom = 432.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yjnue")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Start Game Panel/BackGround/ScrollContainer"]
+process_mode = 3
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 60
+
+[node name="Invitation Panel" type="Control" parent="." node_paths=PackedStringArray("LobbyManagerNode", "invMessageText1", "invMessageText2", "expirationText")]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -130.0
+offset_right = 300.0
+offset_bottom = 219.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("26_paldw")
+LobbyManagerNode = NodePath("..")
+invMessageText1 = NodePath("BackGround/InvMsg1")
+invMessageText2 = NodePath("BackGround/InvMsg2")
+expirationText = NodePath("BackGround/ExpireMsg")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Invitation Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -301.0
+offset_top = -169.5
+offset_right = 301.0
+offset_bottom = 174.5
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0, 0, 0, 1)
+border_width = 4.0
+editor_only = false
+
+[node name="BackGround" type="ColorRect" parent="Invitation Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -169.5
+offset_right = 300.0
+offset_bottom = 174.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.85098, 0.509804, 0, 1)
+
+[node name="popupTitle" type="Label" parent="Invitation Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 279.0
+offset_bottom = 93.0
+text = "Invitation"
+label_settings = SubResource("LabelSettings_7iln1")
+
+[node name="Line2D2" type="Line2D" parent="Invitation Panel/BackGround"]
+position = Vector2(35.2134, 84.25)
+scale = Vector2(0.842679, 0.25)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="InvMsg1" type="Label" parent="Invitation Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.98
+anchor_bottom = 0.953
+offset_left = 28.0
+offset_top = 96.0
+offset_right = -380.0
+offset_bottom = -198.832
+text = "Want to Join?"
+label_settings = SubResource("LabelSettings_qlgw1")
+
+[node name="InvMsg2" type="Label" parent="Invitation Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.98
+anchor_bottom = 0.953
+offset_left = 28.0
+offset_top = 136.0
+offset_right = -40.0
+offset_bottom = -158.832
+text = "You have been invited by ... to play ..."
+label_settings = SubResource("LabelSettings_qlgw1")
+
+[node name="ExpireMsg" type="Label" parent="Invitation Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.98
+anchor_bottom = 0.953
+offset_left = 28.0
+offset_top = 208.0
+offset_right = -40.0
+offset_bottom = -86.832
+text = "This invitation will expire in  ...  seconds"
+label_settings = SubResource("LabelSettings_qx4k1")
+
+[node name="Accept Button" type="TextureButton" parent="Invitation Panel/BackGround" node_paths=PackedStringArray("button", "scriptNode")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.007
+anchor_right = 0.947
+anchor_bottom = 0.976
+offset_left = 15.8
+offset_top = 264.0
+offset_right = -282.4
+offset_bottom = -2.76001
+grow_vertical = 0
+texture_normal = ExtResource("13_hx80o")
+texture_pressed = ExtResource("7_jkvud")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_hv4pb")
+button = NodePath(".")
+scriptNode = NodePath("../..")
+callbackName = "OnInvitationAcceptClick"
+
+[node name="Label" type="Label" parent="Invitation Panel/BackGround/Accept Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.933
+anchor_bottom = 0.833
+offset_right = 16.576
+offset_bottom = 8.01601
+text = "Accept"
+label_settings = SubResource("LabelSettings_xjam8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Refuse Button" type="TextureButton" parent="Invitation Panel/BackGround" node_paths=PackedStringArray("button", "scriptNode")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.007
+anchor_top = 0.023
+anchor_right = 0.947
+anchor_bottom = 0.976
+offset_left = 311.8
+offset_top = 256.088
+offset_right = 13.6
+offset_bottom = -2.76001
+grow_vertical = 0
+texture_normal = ExtResource("13_hx80o")
+texture_pressed = ExtResource("7_jkvud")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_hv4pb")
+button = NodePath(".")
+scriptNode = NodePath("../..")
+callbackName = "OnInvitationRefuseClick"
+
+[node name="Label" type="Label" parent="Invitation Panel/BackGround/Refuse Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.933
+anchor_bottom = 0.833
+offset_right = 16.576
+offset_bottom = 8.016
+text = "Refuse
+"
+label_settings = SubResource("LabelSettings_tu0qn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Warning Panel" type="Control" parent="."]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -130.0
+offset_right = 300.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Warning Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -301.0
+offset_top = -130.0
+offset_right = 301.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0, 0, 0, 1)
+border_width = 4.0
+editor_only = false
+
+[node name="BackGround" type="ColorRect" parent="Warning Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -130.0
+offset_right = 300.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.85098, 0.509804, 0, 1)
+
+[node name="popupTitle" type="Label" parent="Warning Panel/BackGround"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 279.0
+offset_bottom = 93.0
+text = "Warning"
+label_settings = SubResource("LabelSettings_7iln1")
+
+[node name="closePopupButton" type="TextureButton" parent="Warning Panel/BackGround" node_paths=PackedStringArray("button", "scriptNode")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture_normal = ExtResource("12_geeqi")
+stretch_mode = 0
+script = ExtResource("8_hv4pb")
+button = NodePath(".")
+scriptNode = NodePath("../../..")
+callbackName = "OnWarningPanelHide"
+
+[node name="warningText" type="TextEdit" parent="Warning Panel/BackGround"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -266.0
+offset_top = -140.0
+offset_right = 264.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/background_color = Color(0.85098, 0.509804, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_readonly_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1
+
+[node name="Line2D" type="Line2D" parent="Warning Panel/BackGround"]
+position = Vector2(40.1745, 88.5)
+scale = Vector2(0.834891, -0.5)
+points = PackedVector2Array(-4, 0, 636, 0)
+width = 1.0
+default_color = Color(0, 0, 0, 1)

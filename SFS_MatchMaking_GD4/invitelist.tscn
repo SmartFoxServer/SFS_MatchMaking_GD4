@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmytoh4q8nuco"]
+
+[ext_resource type="Script" path="res://scripts/InviteListItem.cs" id="1_j62vf"]
+[ext_resource type="Texture2D" uid="uid://fdou5kj2pavs" path="res://images/icons/checkedbox.png" id="10_jqwms"]
+[ext_resource type="FontFile" uid="uid://q4tvl3dc7vp" path="res://fonts/ARIAL.TTF" id="10_xlbsb"]
+[ext_resource type="Texture2D" uid="uid://dbwx4axb8ohpu" path="res://images/icons/uncheckedbox.png" id="11_ibijx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qwtfj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xarn2"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_nu24e"]
+
+[node name="InviteList" type="Control"]
+layout_mode = 3
+anchor_right = 0.322
+anchor_bottom = 0.069
+offset_right = -71.68
+offset_bottom = 0.109997
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InviteListItem" type="Control" parent="." node_paths=PackedStringArray("BuddyCheckbox")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.988
+anchor_bottom = 1.0
+offset_right = -50.432
+offset_bottom = -8.0
+script = ExtResource("1_j62vf")
+BuddyCheckbox = NodePath("BuddyCheckBox")
+
+[node name="BuddyCheckBox" type="CheckBox" parent="InviteListItem"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.834
+anchor_bottom = 1.333
+offset_left = 16.0
+offset_top = 8.0
+offset_right = -8.15988
+offset_bottom = -15.984
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_xlbsb")
+theme_override_font_sizes/font_size = 26
+theme_override_icons/checked = ExtResource("10_jqwms")
+theme_override_icons/unchecked = ExtResource("11_ibijx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qwtfj")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xarn2")
+text = "BuddyName"
+icon = SubResource("ImageTexture_nu24e")
+flat = true
+icon_alignment = 2
+expand_icon = true
