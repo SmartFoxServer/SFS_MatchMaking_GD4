@@ -22,7 +22,7 @@ This example expands those described in the Lobby: Basics and Lobby: Buddies tut
 In this document we assume that you already went through the previous tutorials, where we explained the subdivision of the application into three scenes, how to create a GlobalManager class to share the connection to SmartFoxServer among scenes and how to implement and manage a buddy list.
 
 <p align="center"> 
-<img width="720" alt="matchmaking" src="">
+<img width="720" alt="matchmaking" src="https://github.com/SmartFoxServer/SFS_MatchMaking_GD4/assets/30838007/c4821c51-4064-4473-80a9-b75da79a34cb">
  </p>
 
 
