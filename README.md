@@ -22,7 +22,7 @@ This example expands those described in the Lobby: Basics and Lobby: Buddies tut
 In this document we assume that you already went through the previous tutorials, where we explained the subdivision of the application into three scenes, how to create a GlobalManager class to share the connection to SmartFoxServer among scenes and how to implement and manage a buddy list.
 
 <p align="center"> 
-<img width="720" alt="connector-login" src="https://github.com/SmartFoxServer/SFS_LobbyBasics_GD4/assets/30838007/3001b9ec-4cc0-4316-9fe2-eaeecdc60a60">
+<img width="720" alt="connector-login" src="">
  </p>h
 
 
@@ -36,13 +36,12 @@ In order to setup and run the example, follow these steps:
 The client's C# code is in the Godot project's *res://scripts* folder, while the SmartFoxServer 2X client API DLLs are in the *res:// folder*.
 
 ## Online Tutorial and Documentation
-The code for this example is divided into multiple classes contained in the res://scripts folder. The folder contains three <name>GlobalManager scripts which are attached to the control nodes in their respective scenes.
-All managers are basic Godot C# scripts implementing the **_Ready**, **_Process** and **_Notification** methods where needed. They also contain the listeners for the events fired by UI components (i.e. buttons), some helper methods and the listeners for SmartFoxServer's client API events.
+The base code for this example is the same of the previous one, expanded to implement the new features.
 
-There is also a script called **GlobalManager** which is a singleton class, and holds a reference to the SmartFox class instance to share the client-server connection among the project's multiple scenes.
+The LobbyManager and GameManager classes have been updated to add the logic related to the Game Room creation and join, and the logic to send invitations.
 
 <p align="center"> 
-<img width="720" alt="connector-login" src="https://github.com/SmartFoxServer/SFS_LobbyBasics_GD4/assets/30838007/c559cfd9-d0af-41f4-866e-65323a279c25">
+<img width="720" alt="connector-login" src="">
  </p>
 
 To learn more about this template and how it is configured for establishing a connection and handling basic SmartFoxServer events, go to the online documentation and tutorials linked below.
@@ -52,9 +51,11 @@ To learn more about this template and how it is configured for establishing a co
 http://docs2x.smartfoxserver.com/ExamplesGodot/lobby-basics
 
 This online documentation includes:
-* Shared Connection and Login
-* Joining a Game Room
-* Exchanging in-game Chat Messages
+* The updated user profile
+* Public and private games
+* Start a new game
+* Quick game join
+* Invitations
   
  and further **Resource Links**
 
