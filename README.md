@@ -22,8 +22,8 @@ This example expands those described in the Lobby: Basics and Lobby: Buddies tut
 In this document we assume that you already went through the previous tutorials, where we explained the subdivision of the application into three scenes, how to create a GlobalManager class to share the connection to SmartFoxServer among scenes and how to implement and manage a buddy list.
 
 <p align="center"> 
-<img width="720" alt="connector-login" src="">
- </p>h
+<img width="720" alt="matchmaking" src="">
+ </p>
 
 
 ## Setup & run
@@ -41,7 +41,7 @@ The base code for this example is the same of the previous one, expanded to impl
 The LobbyManager and GameManager classes have been updated to add the logic related to the Game Room creation and join, and the logic to send invitations.
 
 <p align="center"> 
-<img width="720" alt="connector-login" src="">
+<img width="720" alt="matchmaking" src="">
  </p>
 
 To learn more about this template and how it is configured for establishing a connection and handling basic SmartFoxServer events, go to the online documentation and tutorials linked below.
