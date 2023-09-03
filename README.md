@@ -41,7 +41,7 @@ The base code for this example is the same of the previous one, expanded to impl
 The LobbyManager and GameManager classes have been updated to add the logic related to the Game Room creation and join, and the logic to send invitations.
 
 <p align="center"> 
-<img width="720" alt="matchmaking" src="">
+<img width="720" alt="matchmaking" src="https://github.com/SmartFoxServer/SFS_MatchMaking_GD4/assets/30838007/ebbdeeb0-8914-44ea-a74a-beef6f636f0b">
  </p>
 
 To learn more about this template and how it is configured for establishing a connection and handling basic SmartFoxServer events, go to the online documentation and tutorials linked below.
